@@ -253,32 +253,31 @@ strong { color: var(--ink); font-weight: 600; }
 .pub__doi { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
 .pub__doi i { color: var(--accent); }
 
-/* Honors & conferences */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.subhead { font-size: 1.15rem; margin-bottom: 1rem; }
-.subhead i { color: var(--accent); margin-right: .4rem; }
-.list { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
-.list li {
-  display: flex; gap: 1rem; background: var(--surface); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 1rem 1.2rem; box-shadow: var(--shadow);
+/* Conferences */
+.confs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.conf {
+  display: flex; gap: 1rem; align-items: flex-start; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.1rem 1.25rem; box-shadow: var(--shadow);
 }
-.list__year { flex: none; min-width: 3.2rem; font-family: var(--serif); font-weight: 700; color: var(--accent); }
-.list p { color: var(--muted); font-size: .92rem; }
-@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
-
-/* Hobbies */
-.hobbies { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 1rem; }
-.hobby {
-  display: flex; flex-direction: column; align-items: center; gap: .7rem; text-align: center;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1.6rem 1rem; box-shadow: var(--shadow); font-weight: 600; color: var(--ink);
-  transition: transform .2s, border-color .2s;
+.conf__year { flex: none; font-family: var(--serif); font-weight: 700; font-size: 1.1rem; color: var(--accent); min-width: 3.2rem; }
+.conf strong { display: inline; }
+.conf p { color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+.badge {
+  display: inline-block; margin-left: .4rem; font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--accent-2); border: 1px solid currentColor; border-radius: 999px; padding: .05rem .5rem; vertical-align: middle;
 }
-.hobby:hover { transform: translateY(-3px); border-color: var(--accent); }
-.hobby i { font-size: 1.6rem; color: var(--accent); }
+@media (max-width: 760px) { .confs { grid-template-columns: 1fr; } }
 
-/* Draft placeholders: clearly visible until real content is filled in */
-.placeholder { outline: 2px dashed var(--accent); outline-offset: -2px; opacity: .75; }
+/* Hobbies (compact strip) */
+.hobbies-strip { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+.hobbies-strip__inner { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.hobbies-strip h2 { font-size: 1.25rem; white-space: nowrap; }
+.hobby-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.hobby-tags li {
+  font-size: .88rem; color: var(--text); padding: .35rem .8rem; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+}
+.hobby-tags i { color: var(--accent); margin-right: .3rem; }
 
 /* Contact */
 .contact { background: var(--hero-bg); color: var(--hero-ink); text-align: center; }
@@ -291,7 +290,11 @@ strong { color: var(--ink); font-weight: 600; }
   color: #fff; background: #b8692e; padding: .9rem 1.6rem; border-radius: 999px; max-width: 100%; overflow-wrap: anywhere;
 }
 .contact__email:hover { background: #a05a26; text-decoration: none; }
-.contact__aff { color: var(--hero-muted); margin: 1.2rem 0 1.6rem; font-size: .95rem; }
+.contact__cv { margin-top: 1.2rem; font-size: .95rem; }
+.contact__cv a { color: #e0975a; font-weight: 600; }
+.contact__cv span { color: var(--hero-muted); margin: 0 .4rem; }
+.contact__cv i { margin-right: .3rem; }
+.contact__aff { color: var(--hero-muted); margin: 1rem 0 1.6rem; font-size: .95rem; }
 .contact__aff i { margin-right: .4rem; }
 .contact .socials a { background: transparent; border-color: rgba(255, 255, 255, .2); color: var(--hero-ink); }
 .contact .socials a:hover { background: #b8692e; border-color: #b8692e; }
