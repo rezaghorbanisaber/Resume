@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reza Ghorbani Saber</title>
-  <meta name="description" content="Reza Ghorbani Saber — Operations Research Scientist and PhD researcher at Ghent University & Flanders Make, working on scheduling, combinatorial optimization and decomposition algorithms.">
+  <meta name="description" content="Reza Ghorbani Saber — Operations Research Scientist and PhD researcher at Ghent University & Flanders Make, working on flexible job shop scheduling with human-resource side constraints, decomposition methods and metaheuristics.">
   <meta property="og:title" content="Reza Ghorbani Saber — Operations Research Scientist">
   <meta property="og:description" content="Scheduling, combinatorial optimization, decomposition algorithms and metaheuristics.">
-  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rezaghorbanisaber.github.io/Resume/">
+  <meta property="og:image" content="https://rezaghorbanisaber.github.io/Resume/assets/profile.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313213a'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23e0975a'%3ERG%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +31,7 @@
   <div class="nav__inner container">
     <a href="#home" class="nav__brand">Reza <span>Ghorbani Saber</span></a>
     <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#phd">PhD</a>
       <a href="#research">Research</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
@@ -53,11 +56,12 @@
       <p class="eyebrow">Operations Research Scientist</p>
       <h1>Hi, I'm <span class="accent">Reza Ghorbani Saber</span></h1>
       <p class="lead">
-        I'm a PhD researcher in the Department of Industrial Systems Engineering and Product Design at
-        <strong>Ghent University</strong>. I work on combinatorial optimization, with several years of hands-on
-        experience developing mathematical optimization methods for industrial problems. My expertise lies in
-        <strong>exact and decomposition methods</strong>, <strong>metaheuristics</strong> and
-        <strong>stochastic optimization</strong> frameworks for scheduling.
+        I'm a PhD researcher in the Department of Industrial Engineering and Product Design at
+        <strong>Ghent University</strong> and <strong>Flanders Make</strong>. My research brings human operators into
+        production scheduling: flexible job shops where machines, skilled workers, shift rules and uncertain
+        processing times all shape the plan. I develop <strong>exact and decomposition methods</strong>,
+        <strong>metaheuristics</strong> and <strong>stochastic optimization</strong> approaches that scale to
+        industrial instances.
       </p>
       <div class="hero__cta">
         <a href="#contact" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
@@ -90,14 +94,74 @@
 <section class="stats">
   <div class="container stats__grid">
     <div class="stat reveal"><span class="stat__num" data-count="3">0</span><span class="stat__label">Peer-reviewed journal articles</span></div>
-    <div class="stat reveal"><span class="stat__num stat__num--icon"><i class="fa-solid fa-industry"></i></span><span class="stat__label">Hands-on experience in real-world industry</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="2">0</span><span class="stat__label">Conference proceedings papers</span></div>
     <div class="stat reveal"><span class="stat__num" data-count="6">0</span><span class="stat__label">Conferences &amp; symposia</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="3">0</span><span class="stat__label">Languages spoken</span></div>
+    <div class="stat reveal"><span class="stat__num stat__num--icon"><i class="fa-solid fa-industry"></i></span><span class="stat__label">Hands-on experience in real-world industry</span></div>
+  </div>
+</section>
+
+<!-- ============ PHD AT A GLANCE ============ -->
+<section class="section" id="phd">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow">PhD at a glance</p>
+      <h2>Flexible Job Shop Scheduling with Human-Resource Side Constraints</h2>
+    </header>
+    <div class="thesis reveal">
+      <p>
+        Classical flexible job shop models treat machines as the only scarce resource and assume operators are always
+        available. On real shop floors, setups, quality control, assembly and machine supervision need skilled people,
+        and their skills, shifts and performance decide whether a schedule can actually run. My thesis closes this gap
+        in three complementary settings, each with its own exact and heuristic solution methods.
+      </p>
+      <p class="thesis__sup"><i class="fa-solid fa-user-graduate"></i> Supervisors: Prof. dr. El-Houssaine Aghezzaf &amp; Prof. dr. Pieter Leyman</p>
+    </div>
+    <div class="projects">
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__tag">Machines + operators</span>
+          <span class="status status--review">Under review</span>
+        </div>
+        <h3>Dual-resource constrained flexible job shop</h3>
+        <p>Each operation needs an eligible machine <em>and</em> a qualified operator, and is sequenced on both.</p>
+        <p class="project__methods"><strong>Methods:</strong> Logic-Based Benders Decomposition with CP and tabu search; a joint neighbourhood in which one move changes both the machine and the operator of an operation.</p>
+        <p class="project__result"><i class="fa-solid fa-chart-line"></i><span>Average optimality gap cut from <strong>37% to 6%</strong> on 262 benchmark instances; the standalone tabu search gets within <strong>0.2%</strong> of one-hour CP solutions.</span></p>
+        <div class="project__links">
+          <a href="https://github.com/rezaghorbanisaber/DRCFJSP" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Instances, outputs &amp; results</a>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__tag">Operator timetabling</span>
+          <span class="status status--pub">Published</span>
+        </div>
+        <h3>Integrated scheduling and operator shifts</h3>
+        <p>Operators are assigned to machines and shifts under working-time rules, and every active machine shift needs a qualified operator.</p>
+        <p class="project__methods"><strong>Methods:</strong> strengthened MIP, LBBD with strengthened cuts, a matheuristic (LNS, local branching, fix-and-optimize) and an extended tabu search.</p>
+        <p class="project__result"><i class="fa-solid fa-industry"></i><span>A decision-support toolbox matched to instance size, from exact LBBD to fast tabu search, being <strong>tested in industrial environments</strong>.</span></p>
+        <div class="project__links">
+          <a href="https://doi.org/10.1080/00207543.2026.2642881" target="_blank" rel="noopener"><i class="ai ai-doi"></i> IJPR 2026</a>
+          <a href="https://doi.org/10.1007/978-3-031-43688-8_32" target="_blank" rel="noopener"><i class="ai ai-doi"></i> APMS 2023</a>
+          <a href="https://doi.org/10.1016/j.ifacol.2024.09.235" target="_blank" rel="noopener"><i class="ai ai-doi"></i> INCOM 2024</a>
+          <a href="https://github.com/rezaghorbanisaber/FJS-OT_IJPR" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Test instances</a>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__tag">Uncertainty</span>
+          <span class="status status--wip">In progress</span>
+        </div>
+        <h3>Stochastic flexible job shop</h3>
+        <p>Processing times vary with human-related factors, so a schedule has to perform well across many realisations, not just on average.</p>
+        <p class="project__methods"><strong>Methods:</strong> two-stage stochastic programming with SAA; expected makespan, makespan service level and CVaR; Benders decomposition with critical-path cuts; a measure-aware stochastic tabu search.</p>
+        <p class="project__result"><i class="fa-solid fa-shield-halved"></i><span>Risk-aware schedules that account for unfavourable processing-time outcomes, with bounds from exact decomposition.</span></p>
+      </article>
+    </div>
   </div>
 </section>
 
 <!-- ============ RESEARCH ============ -->
-<section class="section" id="research">
+<section class="section section--alt" id="research">
   <div class="container">
     <header class="section__head reveal">
       <p class="eyebrow">What I work on</p>
@@ -127,19 +191,19 @@
       <article class="card reveal">
         <div class="card__icon"><i class="fa-solid fa-dice"></i></div>
         <h3>Optimization under Uncertainty</h3>
-        <p>Stochastic programming with the L-shaped method and advanced stochastic decompositions, plus stochastic heuristics for operational uncertainty in real-world planning.</p>
+        <p>Two-stage stochastic programming, sample average approximation, L-shaped and Benders decompositions, risk measures such as CVaR, and stochastic heuristics.</p>
       </article>
       <article class="card reveal">
         <div class="card__icon"><i class="fa-solid fa-user-gear"></i></div>
         <h3>Human-Centric &amp; Sustainable Manufacturing</h3>
-        <p>Scheduling with human-resource side constraints, workforce-aware planning (Industry 5.0) and sustainability measures in production systems.</p>
+        <p>Operator skills, shift regulations and human-related variability in scheduling (Industry 5.0), plus sustainability objectives such as carbon emissions.</p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ============ EDUCATION ============ -->
-<section class="section section--alt" id="education">
+<section class="section" id="education">
   <div class="container">
     <header class="section__head reveal">
       <p class="eyebrow">Academic path</p>
@@ -150,6 +214,8 @@
         <span class="timeline__date">2022 – Present</span>
         <h3>PhD in Industrial Engineering and Operations Research</h3>
         <p class="timeline__org"><i class="fa-solid fa-building-columns"></i> Ghent University · Ghent, Belgium</p>
+        <p>Thesis: <em>Flexible Job Shop Scheduling Problem with Human-Resource Side Constraints</em></p>
+        <p class="timeline__sub">Supervisors: Prof. dr. El-Houssaine Aghezzaf &amp; Prof. dr. Pieter Leyman</p>
       </li>
       <li class="timeline__item reveal">
         <span class="timeline__date">2016 – 2018</span>
@@ -166,7 +232,7 @@
 </section>
 
 <!-- ============ EXPERIENCE ============ -->
-<section class="section" id="experience">
+<section class="section section--alt" id="experience">
   <div class="container">
     <header class="section__head reveal">
       <p class="eyebrow">Where I've worked</p>
@@ -180,8 +246,9 @@
         <ul class="bullets">
           <li>Architected and implemented high-performance <strong>C++ scheduling engines</strong> for human-centric Flexible Job Shop Scheduling (FJSP).</li>
           <li>Formulated deterministic and stochastic optimization models addressing operational uncertainty, workforce side constraints and dual-resource machine/operator allocation.</li>
-          <li>Implemented exact decomposition schemes (<strong>Logic-Based Benders Decomposition</strong>, MIP, CP) and local search metaheuristics, improving solution quality and cutting runtime on large-scale benchmarks.</li>
-          <li>Developed algorithms within the collaborative industry project <strong>S4FMS</strong>, building modular C++ and Python APIs to integrate optimization engines into partner architectures and industrial testbeds.</li>
+          <li>Implemented exact decomposition schemes (<strong>Logic-Based Benders Decomposition</strong>, MIP, CP) and tabu search metaheuristics; the hybrid LBBD approach cuts the average optimality gap from 37% to 6% on 262 benchmark instances.</li>
+          <li>Developed algorithms within the collaborative industry project <strong>S4FMS</strong>, building modular C++ and Python APIs to integrate optimization engines into partner architectures and industrial testbeds, where the operator-timetabling scheduler is being tested.</li>
+          <li>Ran large computational studies on the UGent HPC cluster (Slurm job arrays) and published the instances, solver outputs and statistical tests as open data.</li>
           <li>Interfaced production-grade solvers (Gurobi, IBM ILOG CPLEX, CP Optimizer) with custom C++ data structures and graph-based search routines.</li>
         </ul>
       </li>
@@ -200,7 +267,7 @@
 </section>
 
 <!-- ============ SKILLS ============ -->
-<section class="section section--alt" id="skills">
+<section class="section" id="skills">
   <div class="container">
     <header class="section__head reveal">
       <p class="eyebrow">Toolbox</p>
@@ -211,7 +278,8 @@
         <h3><i class="fa-solid fa-square-root-variable"></i> Optimization</h3>
         <ul class="chips">
           <li>Mixed-Integer Programming</li><li>Constraint Programming</li><li>Logic-Based Benders Decomposition</li>
-          <li>Metaheuristics</li><li>Local Search / VNS</li><li>Stochastic Optimization</li><li>Scheduling</li>
+          <li>Branch-and-Check</li><li>Tabu Search</li><li>Matheuristics</li><li>Local Search / VNS</li>
+          <li>Disjunctive Graphs</li><li>Two-Stage Stochastic Programming / SAA</li><li>CVaR</li><li>Scheduling</li>
         </ul>
       </div>
       <div class="skill-group reveal">
@@ -223,7 +291,7 @@
       <div class="skill-group reveal">
         <h3><i class="fa-solid fa-code"></i> Programming &amp; Tools</h3>
         <ul class="chips">
-          <li>C / C++</li><li>Python</li><li>CMake</li><li>Git</li><li>Docker</li><li>HPC</li>
+          <li>C / C++</li><li>Python</li><li>CMake</li><li>Git</li><li>Docker</li><li>HPC (Slurm)</li><li>LaTeX</li>
         </ul>
       </div>
       <div class="skill-group reveal">
@@ -239,18 +307,22 @@
 </section>
 
 <!-- ============ PUBLICATIONS ============ -->
-<section class="section" id="publications">
+<section class="section section--alt" id="publications">
   <div class="container">
     <header class="section__head reveal">
       <p class="eyebrow">Peer-reviewed work</p>
-      <h2>Selected Publications</h2>
+      <h2>Publications</h2>
     </header>
+    <h3 class="pubs__group reveal">Journal articles</h3>
     <div class="pubs">
       <article class="pub reveal">
         <div class="pub__meta"><span class="pub__venue">International Journal of Production Research</span><span class="pub__year">2026</span></div>
         <h3><a href="https://doi.org/10.1080/00207543.2026.2642881" target="_blank" rel="noopener">Decision support for the integrated flexible job shop scheduling and operator timetabling problem</a></h3>
         <p class="pub__authors"><strong>Ghorbani Saber, R.</strong>, Leyman, P., &amp; Aghezzaf, E. H.</p>
-        <a class="pub__doi" href="https://doi.org/10.1080/00207543.2026.2642881" target="_blank" rel="noopener"><i class="ai ai-doi"></i> 10.1080/00207543.2026.2642881</a>
+        <p class="pub__links">
+          <a class="pub__doi" href="https://doi.org/10.1080/00207543.2026.2642881" target="_blank" rel="noopener"><i class="ai ai-doi"></i> 10.1080/00207543.2026.2642881</a>
+          <a class="pub__doi" href="https://github.com/rezaghorbanisaber/FJS-OT_IJPR" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Test instances</a>
+        </p>
       </article>
       <article class="pub reveal">
         <div class="pub__meta"><span class="pub__venue">Computers &amp; Operations Research</span><span class="pub__year">2022</span></div>
@@ -265,6 +337,32 @@
         <a class="pub__doi" href="https://doi.org/10.1016/j.asoc.2020.106736" target="_blank" rel="noopener"><i class="ai ai-doi"></i> 10.1016/j.asoc.2020.106736</a>
       </article>
     </div>
+
+    <h3 class="pubs__group reveal">Under review</h3>
+    <div class="pubs">
+      <article class="pub pub--pending reveal">
+        <div class="pub__meta"><span class="pub__venue">Computers &amp; Operations Research</span><span class="badge">Under review</span></div>
+        <h3>A Benders decomposition-based hybrid approach to the dual resource constrained flexible job shop scheduling problem</h3>
+        <p class="pub__authors"><strong>Ghorbani Saber, R.</strong>, Leyman, P., &amp; Aghezzaf, E. H.</p>
+        <a class="pub__doi" href="https://github.com/rezaghorbanisaber/DRCFJSP" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Data &amp; detailed results</a>
+      </article>
+    </div>
+
+    <h3 class="pubs__group reveal">Conference proceedings</h3>
+    <div class="pubs">
+      <article class="pub reveal">
+        <div class="pub__meta"><span class="pub__venue">IFAC-PapersOnLine (INCOM 2024)</span><span class="pub__year">2024</span></div>
+        <h3><a href="https://doi.org/10.1016/j.ifacol.2024.09.235" target="_blank" rel="noopener">Modeling the integrated flexible job-shop and operator scheduling in flexible manufacturing systems</a></h3>
+        <p class="pub__authors"><strong>Ghorbani Saber, R.</strong>, Leyman, P., &amp; Aghezzaf, E. H. · Vol. 58(19), 343–348</p>
+        <a class="pub__doi" href="https://doi.org/10.1016/j.ifacol.2024.09.235" target="_blank" rel="noopener"><i class="ai ai-doi"></i> 10.1016/j.ifacol.2024.09.235</a>
+      </article>
+      <article class="pub reveal">
+        <div class="pub__meta"><span class="pub__venue">Advances in Production Management Systems (APMS 2023)</span><span class="pub__year">2023</span></div>
+        <h3><a href="https://doi.org/10.1007/978-3-031-43688-8_32" target="_blank" rel="noopener">Mixed integer programming for integrated flexible job-shop and operator scheduling in flexible manufacturing systems</a></h3>
+        <p class="pub__authors"><strong>Ghorbani Saber, R.</strong>, Leyman, P., &amp; Aghezzaf, E. H. · IFIP AICT 692, Springer, 460–470</p>
+        <a class="pub__doi" href="https://doi.org/10.1007/978-3-031-43688-8_32" target="_blank" rel="noopener"><i class="ai ai-doi"></i> 10.1007/978-3-031-43688-8_32</a>
+      </article>
+    </div>
     <p class="center reveal">
       <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=zcHJ3dAAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Full list on Google Scholar</a>
     </p>
@@ -272,18 +370,18 @@
 </section>
 
 <!-- ============ CONFERENCES ============ -->
-<section class="section section--alt" id="conferences">
+<section class="section" id="conferences">
   <div class="container">
     <header class="section__head reveal">
       <p class="eyebrow">Talks &amp; posters</p>
       <h2>Conferences</h2>
     </header>
     <ol class="confs">
-      <li class="conf reveal"><span class="conf__year">2026</span><div><strong>Beta Research Symposium</strong> <span class="badge">Upcoming</span><p>November 2026</p></div></li>
+      <li class="conf reveal"><span class="conf__year">2026</span><div><strong><a href="https://onderzoeksschool-beta.nl/beta-symposium-2026/" target="_blank" rel="noopener">Beta Research Symposium</a></strong> <span class="badge">Upcoming</span><p>19 November 2026 · Soesterberg, Netherlands</p></div></li>
       <li class="conf reveal"><span class="conf__year">2026</span><div><strong>ORBEL — Annual Conference of the Belgian Operational Research Society</strong><p>Leuven, Belgium</p></div></li>
       <li class="conf reveal"><span class="conf__year">2025</span><div><strong>EURO — European Conference on Operational Research</strong><p>Leeds, United Kingdom</p></div></li>
-      <li class="conf reveal"><span class="conf__year">2024</span><div><strong>INCOM — IFAC Symposium on Information Control Problems in Manufacturing</strong><p>Vienna, Austria</p></div></li>
-      <li class="conf reveal"><span class="conf__year">2023</span><div><strong>APMS — Advances in Production Management Systems</strong><p>Trondheim, Norway</p></div></li>
+      <li class="conf reveal"><span class="conf__year">2024</span><div><strong>INCOM — IFAC Symposium on Information Control Problems in Manufacturing</strong><p>Vienna, Austria · <a href="https://doi.org/10.1016/j.ifacol.2024.09.235" target="_blank" rel="noopener">Paper</a></p></div></li>
+      <li class="conf reveal"><span class="conf__year">2023</span><div><strong>APMS — Advances in Production Management Systems</strong><p>Trondheim, Norway · <a href="https://doi.org/10.1007/978-3-031-43688-8_32" target="_blank" rel="noopener">Paper</a></p></div></li>
       <li class="conf reveal"><span class="conf__year">2022</span><div><strong>NOMLC — Netherlands OML Conference</strong><p>Poster presentation · Soesterberg, Netherlands</p></div></li>
     </ol>
   </div>
@@ -328,7 +426,7 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <p>© <span id="year">2026</span> Reza Ghorbani Saber</p>
+    <p>© <span id="year">2026</span> Reza Ghorbani Saber · Last updated October 2026</p>
     <a href="#home" class="footer__top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
   </div>
 </footer>
